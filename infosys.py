@@ -31,7 +31,30 @@ symptom_to_specialty = {
     "eye pain": "Ophthalmologist",
     "toothache": "Dentist",
     "joint pain": "Orthopedic",
-    "stomach pain": "Gastroenterologist"
+    "stomach pain": "Gastroenterologist",
+    "headache": "Neurologist",
+    "dizziness": "Neurologist",
+    "back pain": "Orthopedic",
+    "sore throat": "ENT Specialist",
+    "ear pain": "ENT Specialist",
+    "runny nose": "ENT Specialist",
+    "nausea": "Gastroenterologist",
+    "vomiting": "Gastroenterologist",
+    "fatigue": "General Physician",
+    "insomnia": "Psychiatrist",
+    "anxiety": "Psychiatrist",
+    "depression": "Psychiatrist",
+    "abdominal pain": "Gastroenterologist",
+    "high blood pressure": "Cardiologist",
+    "vision problems": "Ophthalmologist",
+    "knee pain": "Orthopedic",
+    "skin infection": "Dermatologist",
+    "breathing difficulty": "Pulmonologist",
+    "urinary problems": "Urologist",  # Added
+    "childhood illness": "Pediatrician",  # Added
+    "nerve pain": "Neurologist",   # Added
+    "acne": "Dermatologist",  # Added
+    "hearing loss": "ENT Specialist" #Added
 }
 
 # Initialize session state for appointments and user appointments
