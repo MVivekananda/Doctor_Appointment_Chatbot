@@ -2,7 +2,6 @@ smtplib
 datetime
 email
 pandas
-random
 re
 os
 difflib
