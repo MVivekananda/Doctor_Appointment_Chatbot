@@ -1,9 +1,1 @@
-smtplib
-datetime
-email
-pandas
-re
-os
-difflib
-streamlit
 kagglehub
