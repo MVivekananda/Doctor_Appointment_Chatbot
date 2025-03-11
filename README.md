@@ -1,5 +1,6 @@
 
 # Doctor Appointment Chatbot
+
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  <!-- Replace with your actual license badge link and license -->
 
 This project is a Doctor Appointment Chatbot that allows users to book, reschedule, and cancel doctor appointments based on their symptoms through a chat interface. After booking, users receive a confirmation email.
@@ -31,7 +32,6 @@ To install the necessary dependencies, follow these steps:
     streamlit
     kagglehub
     ```
-    **(Optional: Pin specific versions for more consistent behavior.  Example: `pandas==1.5.0`)**
 
 3.  **Install the dependencies:** Open a terminal or command prompt, navigate to the project directory, and run the following command:
 
@@ -43,9 +43,9 @@ To install the necessary dependencies, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MVivekananda/Doctor_Appointment_Chatbot.git  **(Double-check that this is the correct repository URL. Should it be Doctor_Appointment_Chatbot?)**
+   git clone https://github.com/MVivekananda/Doctor_Appointment_Chatbot.git
+       # Make sure to fork this, then clone from your forked repository
    cd Doctor_Appointment_Chatbot
-
 2. Run the Streamlit application:
    ```bash
    streamlit run infosys.py
@@ -106,12 +106,25 @@ To install the necessary dependencies, follow these steps:
     ```
     Bot: Appointment booked successfully! Confirmation email sent.
     ```
-    **Note: These are example interactions. The chatbot's responses are primarily scripted and may not handle all possible inputs. Also the appointment booking system is not connected to real EHR. It is trained with 100k Health Records and Reports data that are found in KaggleHub. It is credited under MIT License.**
+    **IMPORTANT: Please note that these are example interactions. The chatbot's responses are primarily scripted and may not handle all possible inputs. The appointment booking system is not connected to a real EHR. It is trained with 100k Health Records and Reports data that are found in KaggleHub. It is credited under MIT License.**
 
-## License
+## Limitations
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. **(Remember to create a `LICENSE` file in your repository!)**
-Here's a UML diagram explaining Doctor Appointment Chatbot:
+This chatbot has the following limitations:
+
+*   The responses are primarily scripted and do not generate dynamic or personalized text.
+*   The intent recognition is basic and may not accurately understand complex user requests.
+*   The chatbot is not integrated with any real-time doctor schedules or appointment booking systems.
+*   It does not handle edge cases, ambiguous requests, or unexpected inputs gracefully.
+
+## Live Demo [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://saydoc-appointment-chatbot.streamlit.app/) 
+
+Try out the SayDoc Doctor Appointment Chatbot live at: [https://saydoc-appointment-chatbot.streamlit.app/](https://saydoc-appointment-chatbot.streamlit.app/)
+
+
+
+## Project Workflow
+
 ```mermaid
 sequenceDiagram
     participant User
@@ -141,8 +154,15 @@ sequenceDiagram
     Chatbot->>EmailService: Send confirmation email to User.
     Chatbot->>User: Appointment booked successfully! Confirmation email sent.
 ```
-## Live Demo
+## Technologies Used
 
-Try out the SayDoc Doctor Appointment Chatbot live at: [https://saydoc-appointment-chatbot.streamlit.app/](https://saydoc-appointment-chatbot.streamlit.app/)
+This project is built using the following technologies:
 
-##
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)        [![Visual Studio Code](https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=vsc&logoColor=white)](#)
+![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)        [![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=fff)](#)
+[![Flask](https://img.shields.io/badge/Flask-000?logo=flask&logoColor=fff)](#)              [![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff)](#)
+[![Windows](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)    [![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff)](#)
+[![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](#)            [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)        [![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&logoColor=white)](#)        [![Gmail](https://img.shields.io/badge/Gmail-D14836?logo=gmail&logoColor=white)](#)        [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-121013?logo=github&logoColor=white)](#)        [![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=fff)](#)
+
+## License [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
