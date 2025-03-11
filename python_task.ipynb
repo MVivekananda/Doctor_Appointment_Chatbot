@@ -1,0 +1,813 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNT70vb4kh5u8Osi7V8gFE0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MVivekananda/saydoc/blob/main/python_task.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Python Recap"
+      ],
+      "metadata": {
+        "id": "GTZVCwxFXakr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KEqxPlhN0QvP",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6af924a9-6bb1-4dfd-8fcb-87474976e354"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "x = 10, type(x) = <class 'int'>\n",
+            "y = 3.14, type(y) = <class 'float'>\n",
+            "name = Alice, type(name) = <class 'str'>\n",
+            "is_true = True, type(is_true) = <class 'bool'>\n",
+            "my_list = [1, 2, 3, 'apple', True], type(my_list) = <class 'list'>\n",
+            "my_tuple = (1, 2, 3), type(my_tuple) = <class 'tuple'>\n",
+            "my_dict = {'name': 'Bob', 'age': 30}, type(my_dict) = <class 'dict'>\n",
+            "a + b = 7\n",
+            "a - b = 3\n",
+            "a * b = 10\n",
+            "a / b = 2.5\n",
+            "a // b = 2\n",
+            "a % b = 1\n",
+            "a ** b = 25\n",
+            "greeting + ' ' + world = Hello World\n",
+            "greeting.upper() = HELLO\n",
+            "greeting.lower() = hello\n",
+            "'  trim  '.strip() = trim\n"
+          ]
+        }
+      ],
+      "source": [
+        "# ## Basic Data Types and Operations\n",
+        "\n",
+        "# Integer\n",
+        "x = 10\n",
+        "print(f\"x = {x}, type(x) = {type(x)}\")\n",
+        "\n",
+        "# Float\n",
+        "y = 3.14\n",
+        "print(f\"y = {y}, type(y) = {type(y)}\")\n",
+        "\n",
+        "# String\n",
+        "name = \"Alice\"\n",
+        "print(f\"name = {name}, type(name) = {type(name)}\")\n",
+        "\n",
+        "# Boolean\n",
+        "is_true = True\n",
+        "print(f\"is_true = {is_true}, type(is_true) = {type(is_true)}\")\n",
+        "\n",
+        "# List\n",
+        "my_list = [1, 2, 3, \"apple\", True]\n",
+        "print(f\"my_list = {my_list}, type(my_list) = {type(my_list)}\")\n",
+        "\n",
+        "# Tuple\n",
+        "my_tuple = (1, 2, 3)\n",
+        "print(f\"my_tuple = {my_tuple}, type(my_tuple) = {type(my_tuple)}\")\n",
+        "\n",
+        "# Dictionary\n",
+        "my_dict = {\"name\": \"Bob\", \"age\": 30}\n",
+        "print(f\"my_dict = {my_dict}, type(my_dict) = {type(my_dict)}\")\n",
+        "\n",
+        "# Arithmetic Operations\n",
+        "a = 5\n",
+        "b = 2\n",
+        "print(f\"a + b = {a + b}\")\n",
+        "print(f\"a - b = {a - b}\")\n",
+        "print(f\"a * b = {a * b}\")\n",
+        "print(f\"a / b = {a / b}\")  # Standard division\n",
+        "print(f\"a // b = {a // b}\") # Floor division (integer division)\n",
+        "print(f\"a % b = {a % b}\")  # Modulo (remainder)\n",
+        "print(f\"a ** b = {a ** b}\") # Exponentiation\n",
+        "\n",
+        "# String Operations\n",
+        "greeting = \"Hello\"\n",
+        "world = \"World\"\n",
+        "print(f\"greeting + ' ' + world = {greeting + ' ' + world}\") # Concatenation\n",
+        "print(f\"greeting.upper() = {greeting.upper()}\") # Uppercase\n",
+        "print(f\"greeting.lower() = {greeting.lower()}\") # Lowercase\n",
+        "print(f\"'  trim  '.strip() = {'  trim  '.strip()}\") # Remove leading/trailing whitespace"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## Control Flow\n",
+        "\n",
+        "# If-else statement\n",
+        "age = 20\n",
+        "if age >= 18:\n",
+        "    print(\"You are an adult.\")\n",
+        "else:\n",
+        "    print(\"You are a minor.\")\n",
+        "\n",
+        "# Elif (else if)\n",
+        "score = 75\n",
+        "if score >= 90:\n",
+        "    print(\"Excellent!\")\n",
+        "elif score >= 70:\n",
+        "    print(\"Good\")\n",
+        "else:\n",
+        "    print(\"Needs improvement\")\n",
+        "\n",
+        "# For loop\n",
+        "numbers = [1, 2, 3, 4, 5]\n",
+        "print(\"Iterating through numbers:\")\n",
+        "for number in numbers:\n",
+        "    print(number)\n",
+        "\n",
+        "# While loop\n",
+        "count = 0\n",
+        "print(\"While loop:\")\n",
+        "while count < 5:\n",
+        "    print(count)\n",
+        "    count += 1\n",
+        "\n",
+        "# Break and Continue\n",
+        "print(\"Break example:\")\n",
+        "for i in range(10):\n",
+        "    if i == 5:\n",
+        "        break  # Exit the loop\n",
+        "    print(i)\n",
+        "\n",
+        "print(\"Continue example:\")\n",
+        "for i in range(10):\n",
+        "    if i % 2 == 0:\n",
+        "        continue # Skip even numbers\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BV8nR-I2W__F",
+        "outputId": "8b3c23db-9421-485e-e79e-d9a792c1a82d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "You are an adult.\n",
+            "Good\n",
+            "Iterating through numbers:\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "While loop:\n",
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "Break example:\n",
+            "0\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "Continue example:\n",
+            "1\n",
+            "3\n",
+            "5\n",
+            "7\n",
+            "9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## Functions\n",
+        "\n",
+        "# Define a function\n",
+        "def greet(name):\n",
+        "    \"\"\"This function greets the person passed in as a parameter.\"\"\"\n",
+        "    print(f\"Hello, {name}!\")\n",
+        "\n",
+        "# Call the function\n",
+        "greet(\"Charlie\")\n",
+        "\n",
+        "# Function with return value\n",
+        "def add(x, y):\n",
+        "    \"\"\"This function returns the sum of two numbers.\"\"\"\n",
+        "    return x + y\n",
+        "\n",
+        "result = add(5, 3)\n",
+        "print(f\"5 + 3 = {result}\")\n",
+        "\n",
+        "# Function with default argument\n",
+        "def power(base, exponent=2):  # Default exponent is 2\n",
+        "    \"\"\"This function calculates the power of a number.\"\"\"\n",
+        "    return base ** exponent\n",
+        "\n",
+        "print(f\"power(4) = {power(4)}\")       # Uses default exponent (4^2)\n",
+        "print(f\"power(4, 3) = {power(4, 3)}\") # Uses provided exponent (4^3)\n",
+        "\n",
+        "# Lambda functions (anonymous functions)\n",
+        "square = lambda x: x**2\n",
+        "print(f\"square(5) = {square(5)}\")\n",
+        "\n",
+        "# Example using map()\n",
+        "numbers = [1, 2, 3, 4]\n",
+        "squared_numbers = list(map(square, numbers)) # Apply square to each number\n",
+        "print(f\"squared_numbers = {squared_numbers}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HnGIkwveXD9L",
+        "outputId": "cbc4502a-3de4-40aa-d5ae-57f5ff2f77b7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, Charlie!\n",
+            "5 + 3 = 8\n",
+            "power(4) = 16\n",
+            "power(4, 3) = 64\n",
+            "square(5) = 25\n",
+            "squared_numbers = [1, 4, 9, 16]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## Working with Libraries\n",
+        "\n",
+        "# Import the `math` module\n",
+        "import math\n",
+        "\n",
+        "# Use functions from the math module\n",
+        "print(f\"math.sqrt(16) = {math.sqrt(16)}\")\n",
+        "print(f\"math.pi = {math.pi}\")\n",
+        "\n",
+        "# Import the `random` module\n",
+        "import random\n",
+        "\n",
+        "# Generate a random number\n",
+        "print(f\"random.random() = {random.random()}\")   # Between 0.0 and 1.0\n",
+        "print(f\"random.randint(1, 10) = {random.randint(1, 10)}\") # Integer between 1 and 10 (inclusive)\n",
+        "\n",
+        "# Working with `datetime`\n",
+        "import datetime\n",
+        "\n",
+        "today = datetime.date.today()\n",
+        "print(f\"Today's date: {today}\")\n",
+        "\n",
+        "now = datetime.datetime.now()\n",
+        "print(f\"Current date and time: {now}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "c90GyNvTXHFL",
+        "outputId": "d98a6920-dc76-4984-a69a-41dec82214a6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "math.sqrt(16) = 4.0\n",
+            "math.pi = 3.141592653589793\n",
+            "random.random() = 0.32271981115075055\n",
+            "random.randint(1, 10) = 8\n",
+            "Today's date: 2025-03-11\n",
+            "Current date and time: 2025-03-11 17:59:40.519934\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## List Comprehensions\n",
+        "\n",
+        "# Create a list of squares using a loop\n",
+        "squares = []\n",
+        "for i in range(10):\n",
+        "  squares.append(i**2)\n",
+        "print(f\"Squares using a loop: {squares}\")\n",
+        "\n",
+        "# Create the same list using list comprehension\n",
+        "squares_comprehension = [i**2 for i in range(10)]\n",
+        "print(f\"Squares using list comprehension: {squares_comprehension}\")\n",
+        "\n",
+        "# List comprehension with a condition\n",
+        "even_squares = [i**2 for i in range(10) if i % 2 == 0]\n",
+        "print(f\"Even squares using list comprehension: {even_squares}\")\n",
+        "\n",
+        "# More complex example\n",
+        "words = [\"apple\", \"banana\", \"cherry\", \"date\"]\n",
+        "word_lengths = [len(word) for word in words]\n",
+        "print(f\"Word lengths: {word_lengths}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EkHaZw0dXLy3",
+        "outputId": "4927ab9e-aa7f-4932-d3b8-d478a383144f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Squares using a loop: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n",
+            "Squares using list comprehension: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n",
+            "Even squares using list comprehension: [0, 4, 16, 36, 64]\n",
+            "Word lengths: [5, 6, 6, 4]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## File I/O\n",
+        "\n",
+        "# Writing to a file\n",
+        "try:\n",
+        "    with open(\"my_file.txt\", \"w\") as f:\n",
+        "        f.write(\"This is a line of text.\\n\")\n",
+        "        f.write(\"This is another line.\\n\")\n",
+        "    print(\"File 'my_file.txt' written successfully.\")\n",
+        "except Exception as e:\n",
+        "    print(f\"Error writing to file: {e}\")\n",
+        "\n",
+        "# Reading from a file\n",
+        "try:\n",
+        "    with open(\"my_file.txt\", \"r\") as f:\n",
+        "        content = f.read()\n",
+        "        print(\"File content:\")\n",
+        "        print(content)\n",
+        "except FileNotFoundError:\n",
+        "    print(\"File 'my_file.txt' not found.\")\n",
+        "except Exception as e:\n",
+        "    print(f\"Error reading from file: {e}\")\n",
+        "\n",
+        "#Reading line by line\n",
+        "try:\n",
+        "    with open(\"my_file.txt\", \"r\") as f:\n",
+        "        for line in f:\n",
+        "            print(f\"Line: {line.strip()}\") #strip() removes leading/trailing whitespaces\n",
+        "except FileNotFoundError:\n",
+        "    print(\"File 'my_file.txt' not found.\")\n",
+        "except Exception as e:\n",
+        "    print(f\"Error reading from file: {e}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1IeuGzSbXN2v",
+        "outputId": "9357753a-d35e-4687-f57a-cdb228a39024"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "File 'my_file.txt' written successfully.\n",
+            "File content:\n",
+            "This is a line of text.\n",
+            "This is another line.\n",
+            "\n",
+            "Line: This is a line of text.\n",
+            "Line: This is another line.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## Error Handling\n",
+        "\n",
+        "# Try-except block\n",
+        "try:\n",
+        "    result = 10 / 0  # This will cause a ZeroDivisionError\n",
+        "except ZeroDivisionError as e:\n",
+        "    print(f\"Error: Division by zero! {e}\")\n",
+        "except Exception as e: #Catch any other error\n",
+        "    print(f\"An unexpected error occurred: {e}\")\n",
+        "finally:\n",
+        "    print(\"This will always execute, regardless of errors.\")\n",
+        "\n",
+        "# Raising exceptions\n",
+        "def check_age(age):\n",
+        "    if age < 0:\n",
+        "        raise ValueError(\"Age cannot be negative\")\n",
+        "    elif age > 120:\n",
+        "        raise ValueError(\"Age is unrealistic\")\n",
+        "    else:\n",
+        "        print(\"Valid age\")\n",
+        "\n",
+        "try:\n",
+        "    check_age(-5)\n",
+        "except ValueError as e:\n",
+        "    print(f\"Error: {e}\")\n",
+        "\n",
+        "try:\n",
+        "    check_age(30)\n",
+        "except ValueError as e:\n",
+        "    print(f\"Error: {e}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cUeTxmPXXOXO",
+        "outputId": "fb48058c-500a-4df9-c97d-16952f34275d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Error: Division by zero! division by zero\n",
+            "This will always execute, regardless of errors.\n",
+            "Error: Age cannot be negative\n",
+            "Valid age\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#SQL Recap"
+      ],
+      "metadata": {
+        "id": "rKWBr0PkXw_0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## SQL Practice in Google Colab\n",
+        "\n",
+        "# **Important:** Google Colab doesn't have a built-in SQL database.  We'll use SQLite, which is a lightweight, file-based database.  We'll use the `sqlite3` module in Python to interact with it.\n",
+        "\n",
+        "# **Install `ipython-sql` (if you want to use SQL magic commands):**\n",
+        "# This allows you to write SQL directly in Colab cells using `%%sql`.  It's optional.\n",
+        "# ```python\n",
+        "# !pip install ipython-sql\n",
+        "# %load_ext sql\n",
+        "# ```\n",
+        "\n",
+        "# Import the `sqlite3` module\n",
+        "import sqlite3\n",
+        "\n",
+        "# Connect to a SQLite database (or create it if it doesn't exist)\n",
+        "conn = sqlite3.connect('my_database.db')\n",
+        "\n",
+        "# Create a cursor object (used to execute SQL queries)\n",
+        "cursor = conn.cursor()\n",
+        "\n",
+        "# Create a table\n",
+        "cursor.execute('''\n",
+        "    CREATE TABLE IF NOT EXISTS employees (\n",
+        "        id INTEGER PRIMARY KEY,\n",
+        "        name TEXT,\n",
+        "        department TEXT,\n",
+        "        salary REAL\n",
+        "    )\n",
+        "''')\n",
+        "\n",
+        "# Insert some data\n",
+        "cursor.execute(\"INSERT INTO employees (name, department, salary) VALUES ('Alice', 'Sales', 50000)\")\n",
+        "cursor.execute(\"INSERT INTO employees (name, department, salary) VALUES ('Bob', 'Marketing', 60000)\")\n",
+        "cursor.execute(\"INSERT INTO employees (name, department, salary) VALUES ('Charlie', 'Sales', 55000)\")\n",
+        "\n",
+        "# Commit the changes (save the data to the database file)\n",
+        "conn.commit()\n",
+        "\n",
+        "# Query the data\n",
+        "cursor.execute(\"SELECT * FROM employees\")\n",
+        "rows = cursor.fetchall()\n",
+        "\n",
+        "# Print the data\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "#More complex query\n",
+        "cursor.execute(\"SELECT department, AVG(salary) FROM employees GROUP BY department\")\n",
+        "rows = cursor.fetchall()\n",
+        "\n",
+        "print(\"\\nAverage salaries by department:\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# Update data\n",
+        "cursor.execute(\"UPDATE employees SET salary = 65000 WHERE name = 'Bob'\")\n",
+        "conn.commit()\n",
+        "\n",
+        "# Delete data\n",
+        "cursor.execute(\"DELETE FROM employees WHERE name = 'Charlie'\")\n",
+        "conn.commit()\n",
+        "\n",
+        "#Query and print the updated data\n",
+        "cursor.execute(\"SELECT * FROM employees\")\n",
+        "rows = cursor.fetchall()\n",
+        "\n",
+        "print(\"\\nUpdated employee data:\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# Close the connection\n",
+        "conn.close()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rm3rx2fqXQvx",
+        "outputId": "98e3b11b-9965-43ed-f2e4-28383bac6778"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(1, 'Alice', 'Sales', 50000.0)\n",
+            "(2, 'Bob', 'Marketing', 60000.0)\n",
+            "(3, 'Charlie', 'Sales', 55000.0)\n",
+            "\n",
+            "Average salaries by department:\n",
+            "('Marketing', 60000.0)\n",
+            "('Sales', 52500.0)\n",
+            "\n",
+            "Updated employee data:\n",
+            "(1, 'Alice', 'Sales', 50000.0)\n",
+            "(2, 'Bob', 'Marketing', 65000.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ## More SQL Concepts (SQLite)\n",
+        "\n",
+        "# (Assuming you've already run the previous code to create the `my_database.db` database and the `employees` table)\n",
+        "\n",
+        "import sqlite3\n",
+        "\n",
+        "conn = sqlite3.connect('my_database.db')\n",
+        "cursor = conn.cursor()\n",
+        "\n",
+        "# Create a second table: `departments`\n",
+        "cursor.execute('''\n",
+        "    CREATE TABLE IF NOT EXISTS departments (\n",
+        "        id INTEGER PRIMARY KEY,\n",
+        "        name TEXT,\n",
+        "        location TEXT\n",
+        "    )\n",
+        "''')\n",
+        "\n",
+        "# Insert data into the `departments` table\n",
+        "cursor.execute(\"INSERT INTO departments (name, location) VALUES ('Sales', 'New York')\")\n",
+        "cursor.execute(\"INSERT INTO departments (name, location) VALUES ('Marketing', 'London')\")\n",
+        "cursor.execute(\"INSERT INTO departments (name, location) VALUES ('Engineering', 'San Francisco')\")\n",
+        "conn.commit()\n",
+        "\n",
+        "# Add a `department_id` column to the `employees` table to link employees to departments\n",
+        "cursor.execute('''\n",
+        "    ALTER TABLE employees\n",
+        "    ADD COLUMN department_id INTEGER\n",
+        "''')\n",
+        "\n",
+        "# Update the `employees` table to set the `department_id` based on the department name\n",
+        "cursor.execute(\"UPDATE employees SET department_id = 1 WHERE department = 'Sales'\") #Sales department has ID 1\n",
+        "cursor.execute(\"UPDATE employees SET department_id = 2 WHERE department = 'Marketing'\") #Marketing department has ID 2\n",
+        "conn.commit()\n",
+        "\n",
+        "# ---- JOINs ----\n",
+        "\n",
+        "# INNER JOIN: Get employee names and their department locations\n",
+        "cursor.execute('''\n",
+        "    SELECT employees.name, departments.location\n",
+        "    FROM employees\n",
+        "    INNER JOIN departments ON employees.department_id = departments.id\n",
+        "''')\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nEmployee Names and Department Locations (INNER JOIN):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# LEFT JOIN: Get all departments and matching employee names (even if a department has no employees)\n",
+        "cursor.execute('''\n",
+        "    SELECT departments.name, employees.name\n",
+        "    FROM departments\n",
+        "    LEFT JOIN employees ON departments.id = employees.department_id\n",
+        "''')\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nDepartments and Employee Names (LEFT JOIN):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# ---- Subqueries ----\n",
+        "\n",
+        "# Get employees whose salary is above the average salary\n",
+        "cursor.execute('''\n",
+        "    SELECT name, salary\n",
+        "    FROM employees\n",
+        "    WHERE salary > (SELECT AVG(salary) FROM employees)\n",
+        "''')\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nEmployees Above Average Salary (Subquery):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# Get the department name with the highest average salary\n",
+        "cursor.execute('''\n",
+        "    SELECT departments.name\n",
+        "    FROM departments\n",
+        "    WHERE departments.id = (\n",
+        "        SELECT department_id\n",
+        "        FROM employees\n",
+        "        GROUP BY department_id\n",
+        "        ORDER BY AVG(salary) DESC\n",
+        "        LIMIT 1\n",
+        "    )\n",
+        "''')\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nDepartment with Highest Average Salary (Subquery):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# ---- More Concepts ----\n",
+        "\n",
+        "# ORDER BY: Sort employees by salary in descending order\n",
+        "cursor.execute(\"SELECT name, salary FROM employees ORDER BY salary DESC\")\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nEmployees Sorted by Salary (ORDER BY):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# LIMIT: Get the top 2 highest paid employees\n",
+        "cursor.execute(\"SELECT name, salary FROM employees ORDER BY salary DESC LIMIT 2\")\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nTop 2 Highest Paid Employees (LIMIT):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# WHERE with LIKE: Find employees whose name starts with 'A'\n",
+        "cursor.execute(\"SELECT name FROM employees WHERE name LIKE 'A%'\")\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nEmployees Whose Name Starts with 'A' (LIKE):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# COUNT, MAX, MIN: Demonstrating aggregate functions\n",
+        "cursor.execute(\"SELECT COUNT(*) FROM employees\")\n",
+        "count = cursor.fetchone()[0]\n",
+        "print(f\"\\nTotal number of employees: {count}\")\n",
+        "\n",
+        "cursor.execute(\"SELECT MAX(salary) FROM employees\")\n",
+        "max_salary = cursor.fetchone()[0]\n",
+        "print(f\"Highest salary: {max_salary}\")\n",
+        "\n",
+        "cursor.execute(\"SELECT MIN(salary) FROM employees\")\n",
+        "min_salary = cursor.fetchone()[0]\n",
+        "print(f\"Lowest salary: {min_salary}\")\n",
+        "\n",
+        "#DISTINCT: show distinct departments\n",
+        "cursor.execute(\"SELECT DISTINCT department FROM employees\")\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nDistinct departments:\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "#HAVING: filter groups after aggregation.  Find departments with average salary > 50000\n",
+        "cursor.execute('''\n",
+        "    SELECT department, AVG(salary)\n",
+        "    FROM employees\n",
+        "    GROUP BY department\n",
+        "    HAVING AVG(salary) > 50000\n",
+        "''')\n",
+        "rows = cursor.fetchall()\n",
+        "print(\"\\nDepartments with Average Salary > 50000 (HAVING):\")\n",
+        "for row in rows:\n",
+        "    print(row)\n",
+        "\n",
+        "# Closing the connection\n",
+        "conn.close()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XuXv-8ZBXUbl",
+        "outputId": "1de0606f-cb33-4509-a3c9-b4ca2ce4443f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Employee Names and Department Locations (INNER JOIN):\n",
+            "('Alice', 'New York')\n",
+            "('Bob', 'London')\n",
+            "\n",
+            "Departments and Employee Names (LEFT JOIN):\n",
+            "('Sales', 'Alice')\n",
+            "('Marketing', 'Bob')\n",
+            "('Engineering', None)\n",
+            "\n",
+            "Employees Above Average Salary (Subquery):\n",
+            "('Bob', 65000.0)\n",
+            "\n",
+            "Department with Highest Average Salary (Subquery):\n",
+            "('Marketing',)\n",
+            "\n",
+            "Employees Sorted by Salary (ORDER BY):\n",
+            "('Bob', 65000.0)\n",
+            "('Alice', 50000.0)\n",
+            "\n",
+            "Top 2 Highest Paid Employees (LIMIT):\n",
+            "('Bob', 65000.0)\n",
+            "('Alice', 50000.0)\n",
+            "\n",
+            "Employees Whose Name Starts with 'A' (LIKE):\n",
+            "('Alice',)\n",
+            "\n",
+            "Total number of employees: 2\n",
+            "Highest salary: 65000.0\n",
+            "Lowest salary: 50000.0\n",
+            "\n",
+            "Distinct departments:\n",
+            "('Sales',)\n",
+            "('Marketing',)\n",
+            "\n",
+            "Departments with Average Salary > 50000 (HAVING):\n",
+            "('Marketing', 65000.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "PZhs7sBPYOuy"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
