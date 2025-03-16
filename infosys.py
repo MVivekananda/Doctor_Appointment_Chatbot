@@ -587,13 +587,14 @@ def main():
 
         /* Chat bubbles with gradients and animations */
         .stChatMessage {
-            background: linear-gradient(135deg, rgb(163, 190, 240), #c2e9fb);
-            border-radius: 20px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: slideIn 0.5s ease-in-out;
-        }
+			 background: rgb(102, 153, 255); /* Softer gray for chat bubbles */
+			 color: #000000; /* Darker text for readability */
+			 border-radius: 15px;
+			 padding: 12px;
+			 margin: 8px 0;
+			 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			 animation: fadeIn 0.3s ease-in;
+		}
         @keyframes slideIn {
             from { opacity: 0; transform: translateX(-20px); }
             to { opacity: 1; transform: translateX(0); }
@@ -601,13 +602,14 @@ def main():
 
         /* User chat bubble */
         .user-message {
-            background: linear-gradient(135deg, #84fab0, #8fd3f4);
-            border-radius: 20px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: slideIn 0.5s ease-in-out;
-        }
+		    background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient for user */
+            color: #ffffff; /* White text for contrast */
+            border-radius: 15px;
+            padding: 12px;
+            margin: 8px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.3s ease-in;
+		}
 
         /* Typing animation for chatbot */
         .typing {
